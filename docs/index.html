@@ -40,26 +40,30 @@
     }
 
     h2 {
-      color: #e0e0e0; /* Изменил на #e0e0e0 для лучшей читаемости, как в предыдущих версиях */
+      color: #e0e0e0;
       font-size: 1.3rem;
-      margin-bottom: 20px; /* Добавил небольшой отступ снизу */
+      margin-bottom: 30px;
     }
 
-    p {
-      color: #e0e0e0; /* Изменил на #e0e0e0 для лучшей читаемости */
-      font-size: 1.3rem;
-      margin-top: 20px; /* Отступ сверху для отделения от h2 */
-      margin-bottom: 0;
+    .action-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: 2px solid var(--main-color);
+      border-radius: 8px;
+      background: transparent;
+      color: #ffffff; /* Цвет текста белый */
+      text-decoration: none; /* Убрано подчеркивание */
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      cursor: pointer;
     }
 
-    p a { /* Стили для самой ссылки внутри параграфа */
-      color: var(--main-color); /* Цвет ссылки */
-      text-decoration: underline; /* Подчеркивание ссылки */
-      transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
-    }
-
-    p a:hover {
-      color: var(--second-color); /* Цвет ссылки при наведении */
+    .action-button:hover {
+      background: var(--main-color);
+      color: #0f2027; /* Темный текст при наведении */
+      transform: translateY(-2px);
     }
 
     @keyframes fadeIn {
@@ -77,8 +81,12 @@
       h1 {
         font-size: 1.8rem;
       }
-      h2, p { /* Применил медиа-запрос и к p для консистентности */
+      h2 {
         font-size: 1rem;
+      }
+      .action-button {
+        font-size: 1rem;
+        padding: 10px 20px;
       }
     }
   </style>
@@ -87,7 +95,7 @@
   <div class="container">
     <h1>Добро пожаловать в alex-repository!</h1>
     <h2>На данном сайте нет каких-либо страниц, вы можете скачать отсюда файлы по найденным на форумах постам от меня.</h2>
-    <p><a href="https://4pda.to/forum/index.php?showuser=11872414">Мой 4PDA</a></p>
+    <a href="https://4pda.to/forum/index.php?showuser=11872414" class="action-button">Мой 4PDA</a>
   </div>
 </body>
 </html>
