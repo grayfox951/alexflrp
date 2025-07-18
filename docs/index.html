@@ -40,17 +40,27 @@
     }
 
     h2 {
-      color: #ffffff;
+      color: #e0e0e0; /* Изменил на #e0e0e0 для лучшей читаемости, как в предыдущих версиях */
       font-size: 1.3rem;
-      margin-bottom: 0; /* Убрал нижний отступ, так как за ними ничего не следует */
+      margin-bottom: 20px; /* Добавил небольшой отступ снизу */
     }
 
     p {
-      color: #ffffff;
+      color: #e0e0e0; /* Изменил на #e0e0e0 для лучшей читаемости */
       font-size: 1.3rem;
-      margin-bottom: 0; /* Убрал нижний отступ, так как за ними ничего не следует */
+      margin-top: 20px; /* Отступ сверху для отделения от h2 */
+      margin-bottom: 0;
     }
 
+    p a { /* Стили для самой ссылки внутри параграфа */
+      color: var(--main-color); /* Цвет ссылки */
+      text-decoration: underline; /* Подчеркивание ссылки */
+      transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+    }
+
+    p a:hover {
+      color: var(--second-color); /* Цвет ссылки при наведении */
+    }
 
     @keyframes fadeIn {
       from {
@@ -67,7 +77,7 @@
       h1 {
         font-size: 1.8rem;
       }
-      h2 {
+      h2, p { /* Применил медиа-запрос и к p для консистентности */
         font-size: 1rem;
       }
     }
